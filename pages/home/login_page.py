@@ -1,3 +1,5 @@
+import time
+
 from base.basepage import BasePage
 import utilities.custom_logger as cl
 import logging
@@ -47,6 +49,7 @@ class LoginPage(BasePage):
         return result
 
     def verifyLoginFailed(self):
+        time.sleep(2)
         result = self.waitForElement("//span[text()='Your username or password is invalid. Please try again.']",
                             locatorType="xpath", pollFrequency=1)
         self.isElementPresent(element=result)
