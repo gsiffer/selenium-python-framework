@@ -50,11 +50,11 @@ class LoginPage(BasePage):
 
     def verifyLoginFailed(self):
         time.sleep(2)
-        result = self.waitForElement("//span[text()='Your username or password is invalid. Please try again.']",
-                            locatorType="xpath", pollFrequency=1)
-        self.isElementPresent(element=result)
-        # result = self.isElementPresent("//span[text()='Your username or password is invalid. Please try again.']",
-        #                                locatorType="xpath")
+        # result = self.waitForElement("//span[text()='Your username or password is invalid. Please try again.']",
+        #                     locatorType="xpath", pollFrequency=1)
+        # self.isElementPresent(element=result)
+        result = self.isElementPresent("//span[text()='Your username or password is invalid. Please try again.']",
+                                       locatorType="xpath")
         return result
 
     def verifyTitle(self):
