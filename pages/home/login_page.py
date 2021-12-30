@@ -31,6 +31,7 @@ class LoginPage(BasePage):
         self.sendKeys(password, self._password_field)
 
     def clickLoginButton(self):
+        time.sleep(2)
         self.elementClick(self._login_button, locatorType="xpath")
 
     def login(self, email="", password=""):
@@ -49,7 +50,7 @@ class LoginPage(BasePage):
         return result
 
     def verifyLoginFailed(self):
-        time.sleep(2)
+        # time.sleep(2)
         # result = self.waitForElement("//span[text()='Your username or password is invalid. Please try again.']",
         #                     locatorType="xpath", pollFrequency=1)
         # self.isElementPresent(element=result)
