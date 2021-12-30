@@ -31,7 +31,7 @@ class RegisterCoursesCSVDataTest(unittest.TestCase):
     # If assert fails, it stops current test execution and
     # moves to the next test method
     @pytest.mark.run(oreder=1)
-    @data(*getCSVData("D:/Works/workspace_python/letskodeit/testdata.csv"))
+    @data(*getCSVData("D:/Software Development/Selenium_tutorial/workspace_python/letskodeit/testdata.csv"))
     @unpack
     def test_invalid_card_details(self, courseName, ccNum, ccExp, ccCVV):
 
