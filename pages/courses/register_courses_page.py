@@ -1,3 +1,5 @@
+import time
+
 from base.basepage import BasePage
 import utilities.custom_logger as cl
 import logging
@@ -39,6 +41,7 @@ class RegisterCoursesPage(BasePage):
         self.elementClick(self._course_xpath.format(fullCourseName), locatorType="xpath")
 
     def clickEnrollInCourseButton(self):
+
         enrollInCourseElement = self.waitForElement(locator=self._enroll_button_xpath, locatorType="xpath",
                                                     pollFrequency=1)
         self.elementClick(element=enrollInCourseElement)
