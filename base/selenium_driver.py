@@ -84,7 +84,7 @@ class SeleniumDriver():
             if locator:
                 element = self.getElement(locator, locatorType)
             element.click()
-            self.log.info(f"Clicked on element with locator: {locator} locatorType: {locatorType}")
+            self.log.info(f"Clicked on element with locator: {locator} locatorType: {locatorType} element:{element}")
         except:
             self.log.error(f"Cannot click on the element with locator: {locator} locatorType: {locatorType}")
             print_stack()
